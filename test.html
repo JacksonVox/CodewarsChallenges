@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+
+<script>
+
+
+function digPow(n, p){
+  let nArr = String(n).split('').map(Number)
+  let numSumPowers = 0
+  for(let i = 0; i < nArr.length; i++){
+    numSumPowers += nArr.at(i) ** (p+i)
+  }
+  console.log(numSumPowers)
+  return Number.isInteger(numSumPowers / n) ? numSumPowers / n : -1
+}
+
+
+digPow(89, 1) // 1
+console.log(digPow(92, 1)) // -1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
