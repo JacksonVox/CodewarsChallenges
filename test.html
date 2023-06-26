@@ -10,23 +10,11 @@
 
 <script>
 
-function correct(string)
-{
-	const transCorrection = {
-    5: "S",
-    0: "O",
-    1: "I"
-  }
-  return string.split("").map(e => {
-    if (!isNaN(e)) {
-      return transCorrection[e] || e;
-    } else {
-      return e;
-    }
-  }).join("");
+function isPangram(string){
+  return alphabet.every(x => string.toLowerCase().includes(x));
 }
 
-
+const alphabet = [...'abcdefghijklmnopqrstuvwxyz']
 
 
 
