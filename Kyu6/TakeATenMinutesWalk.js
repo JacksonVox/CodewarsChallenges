@@ -1,15 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  
-
-<script>
-
 function isValidWalk(walk) {
   function walkEqual(arr,d1,d2){
     return arr.filter(e => e === d1 || e === d2)
@@ -32,36 +20,3 @@ function isValidWalk(walk) {
     return false
   }
 }
-
-console.log(isValidWalk(['n','s','n','s','n','s','n','s','w','e','w','e','w','e','w','e']))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
-</body>
-</html>
