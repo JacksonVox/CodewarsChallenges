@@ -10,31 +10,18 @@
 
 <script>
 
-function alignRight(text,width){
-  text = text.split(' ')
-  let output = []
-  let newLine = []
-  while (text.length !== 0){
-    newLine = []
-    while (newLine.push(text[0]) <= width){
-      text.shift()
-    }
-    newLine = newLine.join(' ')
-    for(let i = 0; i <= width - newLine.length; ){
-      newLine = " " + newLine
-      }
-    output.push(newLine)
-    }
-  return output.join('\n')
+function order(words){
+  if (words === ""){return ""}
   
+  const numbersArr = [1,2,3,4,5,6,7,8,9]
+  let wordsArr = words.split(" ")
+  let output = []
+  wordsArr.forEach((word) => { 
+    output[(word.split("").sort()[0] -1)] = word})
+  return output.join(" ")
 }
 
-console.log(alignRight("Two lines, I am",10))
-
-
-
-
-
+console.log(order("is2 Thi1s T4est 3a"))
 
 
 
