@@ -9,24 +9,27 @@
   
 
 <script>
-
-function order(words){
-  if (words === ""){return ""}
   
-  const numbersArr = [1,2,3,4,5,6,7,8,9]
-  let wordsArr = words.split(" ")
-  let output = []
-  wordsArr.forEach((word) => { 
-    output[(word.split("").sort()[0] -1)] = word})
-  return output.join(" ")
+function twoSum(numbers, target) {
+  const output = []
+  numbers.forEach((e, i, array) => {
+    const compareArr = array.splice(i, i + 1)
+    compareArr.forEach((compareE) => {
+      if (e + compareE === target){
+        output.push(i, numbers.indexOf(compareE))
+        return
+      }
+    })
+  })
+  return output
 }
 
-console.log(order("is2 Thi1s T4est 3a"))
 
+//input (numbers) array and (target) number
 
+//return two separate indexes of array elements that sum to target number
 
-
-
+console.log([twoSum([4,6,2,3], 9)])  // [1,3]
 
 </script>
 
